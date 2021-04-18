@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App24.MainPage">
+    
+    
+
+    <StackLayout>
+        <Frame BackgroundColor="#597e8d" Padding="24" CornerRadius="0">
+            <Label Text="API päring" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>        
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" TextColor="Black" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button
+                BackgroundColor="#597e8d"
+                Clicked="OnDelete"
+                Text="Kustuta kirje"
+                HorizontalOptions="FillAndExpand" />
+
+        <Button
+                BackgroundColor="#597e8d"
+                Clicked="OnAdd"
+                Text="Lisa ajatempel"
+                HorizontalOptions="FillAndExpand" />
+
+    </StackLayout>
+
+</ContentPage>
